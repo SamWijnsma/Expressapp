@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width,">
+        <title>Update goal</title>
+    </head>
+
+    <body>
+        <h1>Verander een goal!</h1>
+        <form action="/products/<%=product._id%>?_method=PUT" method="POST">
+            <label for="name">Naam</label>
+        <input type="text" name="name" id="name" placeholder="Naam" value="<%=product.name%>">
+            <label for="year">Welk Jaar</label>
+        <input type="number" name="year" id="year" placeholder="Jaar" value="<%=product.year%>">
+            <label for="category">Catagory</label>
+        <select name="category" id="category">
+            <option value="penalty">Penalty</option>
+            <option value="kopgoal">Kopgoal</option>
+            <option value="afstandschot">Afstandschot</option>
+            <option value="solo">Solo</option>
+            <option value="spelhervatting">Spelhervatting</option>
+            <option value="overig">Overig</option>
+        </select>
+        <button>Verander!</button>
+        </form>
+        <a href ="/products"> Terug naar de lijst met goals</a>
+        <p>
+        <a href ="/"> Home</a>
+        </p>
+
+       
+
+</body>
+</html>

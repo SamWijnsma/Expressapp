@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width,">
+        <title><%= product.name %></title>
+    </head>
+
+    <body>
+       
+        <h1> <%= product.name %> </h1>
+        <ul>
+            <li> Year: <%= product.year %> </li>
+            <li> Category: <%= product.category %> </li>
+            <a href='https://www.youtube.com/results?search_query=<%= product.name %>+<%= product.year %>'>Bekijk het op YouTube!</a>
+
+        </ul>
+        <p>
+        <a href ="/products"> Terug naar de lijst met goals</a>
+        </p>
+        <p>
+        <a href ="/"> Terug naar de homepage</a>
+        </p>
+        <p>
+            <a href="/products/<%=product.id%>/edit">Verander iets!</a>
+        </p>
+        <p>
+<form action="/products/<%=product._id%>?_method=DELETE" method="POST">
+    <button>HAAL HET WEG!</button>
+</form>
+
+        </p>
+    </body>
+</html>

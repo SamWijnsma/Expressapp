@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Basic Skeleton</title>
+
+        <!-- here's the syntax for including CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+        <!-- always load your own CSS file after the Booststrap CSS file -->
+        <!-- so you can override Bootstrap CSS when needed  -->
+        <link rel="stylesheet" href="css/main.css" />
+
+        <!-- and include jQuery and Bootstrap -->
+        <script src="/jquery/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
+        <!-- load your JS file's after (= defer) the DOM is loaded  -->
+        <script src="js/main.js" defer></script>
+    </head>
+
+    <div class="container">
+        <h1><%= first_name %></h1>
+        
+        <ul>
+            <% for(let i = 0; i < fruitList.length; i++) { %>
+                <li><%= fruitList[i] %></li>
+            <% } %>
+        </ul>
+
+        <form action="/insert" method="POST">
+            <label for="event_text">Event text:</label>
+            <textarea class="form-control" id="event_text" name="event_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente, cum consequatur doloremque vel a ducimus incidunt recusandae aperiam, itaque laboriosam, debitis possimus ipsum distinctio? Enim necessitatibus iste quas maiores.
+            </textarea>
+        
+            <label for="day">Dag:</label>
+            <input type="text" class="form-control" id="day" name="day" value="3">
+        
+            <label for="day">Maand:</label>
+            <input type="text" class="form-control" id="month" name="month" value="12">
+        
+            <label for="day">Jaar</label>
+            <input type="text" class="form-control" id="year" name="year" value="2020">
+        
+            <label for="day">Uur</label>
+            <input type="text" class="form-control" id="hour" name="hour" value="13">
+        
+            <label for="day">Minuut</label>
+            <input type="text" class="form-control" id="minute" name="minute" value="36">
+        
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+    </body>
+</html>
